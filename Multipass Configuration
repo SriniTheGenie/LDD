@@ -1,3 +1,5 @@
+https://engineers.inpyjama.com/learn/home/ldd-101/section/507452/lesson/3157237?
+
 Download Multipass
 Download Oracle VM VirtualBox
 Download VSCode
@@ -13,4 +15,19 @@ Creating the virtual machine (Windows)
     And we are naming the virtual machine with the name primary.  This is to be in sync withe name in linux and Mac environments as per the course
 5) Mean while install Remote Development extension in vscode
 6) Once the primary virtual machine is launched, go to cmd and write the following command
-    
+7) multipass shell -> This command will make you enter into the ubuntu primary
+What are we going to do now?
+Edit a file with password protection for connecting vscode and the primary machine through ssh
+8) sudo vim /etc/ssh/sshd_config
+9) The configuration file opens up
+    use, 
+   :set nu -> to set line numbers
+   Goto line 62 and change the kbdinteractiveauthentication from no to yes
+10) sudo systemctl daemon-reload
+11) sudo service ssh restart to restart ssh service to take in the change that we have made
+12) Set password using the following command
+    sudo passwd ubuntu
+13) make a folder called ldd in the primary machine through mkdir ldd command
+14) Now to get the IP address of the machine type in multipass list in the windows powershell while the primary machine is in running state and get the IP.  This will be used to connect the vscode to the virtual machine
+    primary
+
