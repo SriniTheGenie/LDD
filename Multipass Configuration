@@ -1,0 +1,16 @@
+Download Multipass
+Download Oracle VM VirtualBox
+Download VSCode
+
+Creating the virtual machine (Windows)
+1) After installation of Mutlipass, reboot your pc
+2) Open CMD and run the following command
+   multipass networks
+3) This command will give a Wi-Fi interface name
+4) Then runt the following cmd
+    multipass launch --network ##WIFI## --name primary
+    ## name stands for the wifi network name from the result of the previous command in point 2
+    And we are naming the virtual machine with the name primary.  This is to be in sync withe name in linux and Mac environments as per the course
+5) Mean while install Remote Development extension in vscode
+6) Once the primary virtual machine is launched, go to cmd and write the following command
+    
